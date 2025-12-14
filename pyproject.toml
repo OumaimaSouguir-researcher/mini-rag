@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "mini-rag"
+version = "0.1.0"
+description = "Local-first RAG system for private document Q&A"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+pydantic = "^2.5.0"
+pydantic-settings = "^2.1.0"
+langchain = "^0.1.0"
+langchain-community = "^0.0.10"
+sentence-transformers = "^2.2.2"
+faiss-cpu = "^1.7.4"
+pypdf = "^3.17.0"
+python-multipart = "^0.0.6"
+unstructured = "^0.11.0"
+pytesseract = "^0.3.10"
+pdf2image = "^1.16.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.21.1"
+black = "^23.11.0"
+ruff = "^0.1.6"
+mypy = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
